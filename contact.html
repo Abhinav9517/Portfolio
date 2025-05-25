@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Abhinav</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+       <video class="video-background" autoplay loop muted>
+    <source src="/assets/bg-portfolio.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+ <div class="contact-container">
+    <h1 class="section-title">Contact Me</h1>
+    <form class="contact-form"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdbtFmDqhYqxuWiN-E8YF9MwAer4WTJbGKrfE2AVk6GcYNnGg/formResponse"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="redirectAfterSubmit(); return true;">
+
+      <!-- Replace these entry IDs with real ones from your form -->
+      <input type="text" name="entry.655376895" placeholder="Your Name" required />
+      <input type="email" name="entry.1346622602" placeholder="Your Email" required />
+      <input type="number" name="entry.324086954" placeholder="Mobile number" required />
+      <textarea name="entry.71277680" placeholder="Your Message" rows="6" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+  </div>
+  <script>
+  function redirectAfterSubmit() {
+    setTimeout(function () {
+      window.location.href = "thankyou.html"; // redirect to thank you page
+    }, 500); // small delay to let Google process the form
+  }
+</script>
+
+</body>
+</html>

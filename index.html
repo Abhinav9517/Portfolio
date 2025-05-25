@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhinav | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="assets/resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <div class="container">
+        <video class="video-background" autoplay loop muted>
+            <source src="/assets/bg-portfolio.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="profile-container">
+            <img src="./assets/Passport_Photograph 95 KB.jpeg" alt="Profile Photo" class="profile-photo">
+        </div>
+        <div class="glass-box">
+            <h1>Hello, I'm <span class="highlight">Abhinav</span></h1>
+            <p class="typing-text"><span id="typewriter"></span></p>
+            <div class="buttons">
+                <a href="https://github.com/Abhinav9517" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/abhinav-kumar-maurya-4778b5266/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Blmbhx3MHTqK%2Ftt%2FTimKymQ%3D%3D"
+                    target="_blank"><i class="fab fa-linkedin"></i>
+                    LinkedIn</a>
+                <a href="assets/Resume.pdf" target="_blank"><i class="fas fa-file"></i> Resume</a>
+                <a href="projects.html"><i class="fas fa-code"></i> Projects</a>
+            </div>
+        </div>
+        <footer>&copy; 2025 Abhinav • Made with ❤️ Heart</footer>
+    </div>
+
+    <script>
+        const texts = ["C Developer", "Developer", "Web Developer"];
+        let count = 0, index = 0, currentText = '', letter = '';
+        (function type() {
+            if (count === texts.length) count = 0;
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+            document.getElementById('typewriter').textContent = letter;
+            if (letter.length === currentText.length) {
+                count++; index = 0;
+                setTimeout(type, 1500);
+            } else {
+                setTimeout(type, 100);
+            }
+        })();
+    </script>
+</body>
+
+</html>

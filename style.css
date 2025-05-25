@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* background: url('./assets/amber-weir-dhWGajkEFzE-unsplash.jpg') no-repeat center center/cover;- */
+    color: #e2e8f0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "ABHINAV😊";
+    position: absolute;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.099);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: floatName 10s ease-in-out infinite;
+    z-index: 0;
+    white-space: nowrap;
+    letter-spacing: 15px;
+    font-weight: 900;
+}
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+@keyframes floatName {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-48%, -52%) rotate(1deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.container {
+    margin-top: 90px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /* z-index: -1; */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0e2839;
+    /* Optional border */
+    box-shadow: 0 4px 8px rgba(28, 3, 42, 0.2);
+    /* Optional shadow */
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.glass-box {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.typing-text {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+    height: 24px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #e2e8f0;
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* NavBar */
+.navbar {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.navbar a {
+    color: #e2e8f0;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+}
+
+.project-list li {
+    background: rgba(0, 0, 0, 0.6);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+.contact-form button {
+    background: #2563eb;
+    border: none;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background: #1d4ed8;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 100px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00f7ff;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px #00f7ff66;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-box h1 {
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #00f7ff;
+  margin-bottom: 20px;
+}
+
+.about-box p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: 'Roboto', sans-serif;
+  color: #f0f0f0;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00f7ff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 0 15px #00f7ff88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ffffff;
+}
+
+.project-card h3,
+.project-card p {
+  margin: 0;
+  color: inherit;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #00f7ffcc;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+
+/* Contact Page Design */
+
+.contact-container {
+  max-width: 600px;
+  margin: 120px auto;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00f7ff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #00f7ff44;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  position: relative;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 20px;
+  font-size: 1rem;
+  border: 2px solid #00f7ff;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00f7ff;
+  box-shadow: 0 0 10px #00f7ff99;
+}
+
+.contact-form button {
+  padding: 14px;
+  background: #00f7ff;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background: #00ddee;
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .contact-container {
+    margin: 80px 20px;
+    padding: 25px;
+  }
+}
